@@ -1,0 +1,9 @@
+# Ignorar arquivos temporários ou de backup
+*.class
+*.log
+*.swp
+*.bak
+
+# Não ignorar a pasta lib e arquivos .jar dentro dela
+!lib/
+!lib/*.jar

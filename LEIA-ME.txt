@@ -1,0 +1,36 @@
+===========================================
+           INSTRUÇÕES DO PROJETO
+===========================================
+
+Para rodar o projeto "Vendas Salgados", siga as instruções abaixo.
+
+1. **Alteração do caminho no DBConnection.java**:
+   - Abra o arquivo `DBConnection.java`.
+   - Localize a linha onde o caminho do banco de dados é definido:
+     ```
+     "/{CAMINHO DO PROJETO JAVA}/vendas_salgados.db"
+     ```
+   - Substitua `/{CAMINHO DO PROJETO JAVA}/vendas_salgados.db` pelo caminho completo do seu projeto, por exemplo:
+     ```
+     "Seu caminho do projeto/vendas_salgados.db"
+     ```
+   - Certifique-se de colocar o caminho correto onde o arquivo `vendas_salgados.db` está localizado.
+
+2. **Compilação do código Java**:
+   - Abra o terminal ou prompt de comando na pasta raiz do seu projeto.
+   - Execute o seguinte comando para compilar os arquivos `.java`:
+     ```
+     javac -cp .:{CAMINHO DO PROJETO}/lib/sqlite-jdbc-3.47.0.0.jar *.java
+     ```
+   - Substitua `{CAMINHO DO PROJETO}` pelo caminho absoluto até a pasta do seu projeto.
+
+3. **Execução do programa**:
+   - Após compilar o código, execute o programa com o comando abaixo:
+     ```
+     java -cp .:{CAMINHO DO PROJETO}/lib/sqlite-jdbc-3.47.0.0.jar Main
+     ```
+   - Novamente, substitua `{CAMINHO DO PROJETO}` pelo caminho absoluto até a pasta do seu projeto.
+
+Agora o projeto estará pronto para rodar corretamente.
+
+===========================================

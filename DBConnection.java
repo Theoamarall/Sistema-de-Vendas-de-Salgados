@@ -9,7 +9,6 @@ public class DBConnection {
         this.url = url;
     }
 
-<<<<<<< HEAD
     // Construtor sem parâmetros, com URL padrão ou a partir de variável de ambiente
     public DBConnection() {
         // Tenta obter o caminho do banco de dados a partir de uma variável de ambiente
@@ -19,12 +18,20 @@ public class DBConnection {
             caminhoDB = "vendas_salgados.db";  // Caminho relativo no mesmo diretório do projeto
         }
         this.url = caminhoDB;
-=======
     // Construtor sem parâmetros, com URL padrão
     public DBConnection() {
         // URL padrão do banco de dados, que pode ser alterada conforme necessário
         this.url = "/sdcard/PROJETOS/JAVA/vendas_salgados.db"; // Defina a URL aqui diretamente
->>>>>>> 8fc4241 (Adicionando a pasta lib com as dependências)
+
+    // Construtor sem parâmetros, com URL padrão ou a partir de variável de ambiente
+    public DBConnection() {
+        // Tenta obter o caminho do banco de dados a partir de uma variável de ambiente
+        String caminhoDB = System.getenv("CAMINHO_DB");
+        if (caminhoDB == null) {
+            // Caso a variável de ambiente não esteja definida, usa o caminho padrão
+            caminhoDB = "vendas_salgados.db";  // Caminho relativo no mesmo diretório do projeto
+        }
+        this.url = caminhoDB;
     }
 
     // Método para conectar ao banco de dados
